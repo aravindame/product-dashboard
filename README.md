@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+# React Data Visualization with Filtering
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project demonstrates a React application utilizing various tools to visualize and filter product data.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Initial State:** Upon loading, a PIE chart displays all product categories. (#pie-chart)
+- **TypeScript Types:** Category and Product data are defined with TypeScript interfaces for type safety. (#typescript)
+- **Filtering and Charts:**
+  - A "Clear" button resets filters and displays the default PIE chart. (#clear-button)
+  - Reports can be run with only a category filter, showing a category-specific PIE chart. (#category-filter)
+  - The column bar chart requires clicking "Run Report" to generate. (#run-report)
+  - "Run Report" disables after a report is generated until filters change. (#disable-run-report)
 
-## Expanding the ESLint configuration
+## Technology Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React with Hooks ([react](https://reactjs.org/))
+- TypeScript ([typescript](https://www.typescriptlang.org/))
+- DummyJSON API (data source)
+- Material UI (UI components) with Atomic design
+- Highcharts (chart library) ([highcharts](https://www.highcharts.com/))
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+1. Clone this repository or open it in CodeSandbox: [CodeSandbox](https://codesandbox.io/)
+2. Ensure you have Node.js and npm (or yarn) installed on your system.
+3. Navigate to the project directory in your terminal and run `npm install` (or `yarn install`) to install dependencies.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Running the Application
+
+1. In your terminal, run `npm start` (or `yarn start`) to start the development server.
+2. The application will open in your web browser, typically at [http://localhost:3000/](http://localhost:3000/).
+
+## Development
+
+- Feel free to modify the code to suit your specific needs. The code is well-structured and uses React best practices to ensure maintainability.
+
+## Additional Notes
+
+- Consider implementing error handling for API calls and unexpected data.
+- Explore displaying a loading indicator while data is being fetched.
+- Advanced filtering options can be added based on project requirements.
+- Ensure UI elements are accessible to users with disabilities.
