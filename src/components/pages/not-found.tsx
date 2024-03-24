@@ -21,7 +21,7 @@ const NotFoundPage = () => {
         </Grid>
         <Grid item xs={12}>
           <Box mt={2}>
-            <Link href='/products' passHref>
+            <Link to='/'>
               <Button variant='contained' color='primary' sx={{ textTransform: 'none' }}>
                 Go Back to Products
               </Button>
